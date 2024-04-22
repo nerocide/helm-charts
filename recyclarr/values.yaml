@@ -1,0 +1,24 @@
+controllers:
+  main:
+    containers:
+      main:
+        image:
+          # -- image repository
+          repository: recyclarr/recyclarr
+          # -- image pull policy
+          pullPolicy: IfNotPresent
+          # -- image tag
+          tag: latest
+service:
+  main:
+    controller: main
+    ports:
+      http:
+        port: 10241
+persistence:
+  config:
+    type: persistentVolumeClaim
+    accessMode: ReadWriteOnce
+    size: 1Gi
+    globalMounts:
+      - path: /config
