@@ -4,17 +4,11 @@ controllers:
       main:
         image:
           # -- image repository
-          repository: recyclarr/recyclarr
+          repository: ghcr.io/recyclarr/recyclarr
           # -- image pull policy
           pullPolicy: IfNotPresent
           # -- image tag
           tag: latest
-service:
-  main:
-    controller: main
-    ports:
-      http:
-        port: 10241
 persistence:
   config:
     type: persistentVolumeClaim
