@@ -27,6 +27,27 @@ entries:
   upsnap:
   - apiVersion: v2
     appVersion: 4.2.10
+    created: "2024-06-10T22:04:14.054508057Z"
+    dependencies:
+    - name: common
+      repository: https://bjw-s.github.io/helm-charts
+      version: 3.1.0
+    description: A simple wake on lan web app written with SvelteKit, Go and PocketBase.
+    digest: 2b4da97515ccef5c5d71529095ea934a609c21862d54cf2c7001790a165213d7
+    home: https://github.com/seriousm4x/UpSnap
+    icon: https://github.com/seriousm4x/UpSnap/blob/master/frontend/static/gopher.svg
+    keywords:
+    - wol
+    - nmap
+    name: upsnap
+    sources:
+    - https://github.com/seriousm4x/UpSnap
+    type: application
+    urls:
+    - upsnap-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v2
+    appVersion: 4.2.10
     created: "2024-06-10T21:25:04.152855539Z"
     dependencies:
     - name: common
@@ -46,4 +67,4 @@ entries:
     urls:
     - upsnap-0.1.0.tgz
     version: 0.1.0
-generated: "2024-06-10T21:25:04.15286703Z"
+generated: "2024-06-10T22:04:14.054520951Z"
