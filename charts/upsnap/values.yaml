@@ -40,6 +40,3 @@ persistence:
     size: 1Gi
     globalMounts:
       - path: /app/pb_data
-
-
-
