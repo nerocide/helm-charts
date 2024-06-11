@@ -1,3 +1,7 @@
+# Access to host network is required to send WOL magic packets
+defaultPodOptions:
+  hostNetwork: true
+
 controllers:
   main:
     containers:
