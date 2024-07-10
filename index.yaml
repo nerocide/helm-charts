@@ -3,6 +3,27 @@ entries:
   rclone:
   - apiVersion: v2
     appVersion: 1.67.0
+    created: "2024-07-10T19:20:19.837012713Z"
+    dependencies:
+    - name: common
+      repository: https://bjw-s.github.io/helm-charts
+      version: 3.1.0
+    description: rsync for cloud storage
+    digest: d87c6df1a09043f93e23dce2c3bbd1f8415204a670cc2b23bd7e7fe092706ea8
+    home: https://rclone.org/
+    icon: https://raw.githubusercontent.com/rclone/rclone/master/graphics/logo/svg/logo_symbol_color.svg
+    keywords:
+    - wol
+    - nmap
+    name: rclone
+    sources:
+    - https://github.com/rclone/rclone
+    type: application
+    urls:
+    - rclone-0.2.0.tgz
+    version: 0.2.0
+  - apiVersion: v2
+    appVersion: 1.67.0
     created: "2024-06-15T23:03:14.586864475Z"
     dependencies:
     - name: common
@@ -110,4 +131,4 @@ entries:
     urls:
     - upsnap-0.1.0.tgz
     version: 0.1.0
-generated: "2024-06-15T23:03:14.586875025Z"
+generated: "2024-07-10T19:20:19.837025978Z"
