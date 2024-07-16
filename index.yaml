@@ -3,6 +3,27 @@ entries:
   jellyfin:
   - apiVersion: v2
     appVersion: 10.9.7
+    created: "2024-07-16T00:49:40.060397385Z"
+    dependencies:
+    - name: common
+      repository: https://bjw-s.github.io/helm-charts
+      version: 3.1.0
+    description: The Free Software Media System
+    digest: 40c3f31688d237cf75bcb7dc858b0727db4d4963c2deac0be71b1e40738f2202
+    home: https://jellyfin.org/
+    icon: https://jellyfin.org/images/logo.svg
+    keywords:
+    - media-system
+    - streaming
+    name: jellyfin
+    sources:
+    - https://github.com/jellyfin/jellyfin
+    type: application
+    urls:
+    - jellyfin-0.2.tgz
+    version: "0.2"
+  - apiVersion: v2
+    appVersion: 10.9.7
     created: "2024-07-16T00:19:01.499266476Z"
     dependencies:
     - name: common
@@ -153,4 +174,4 @@ entries:
     urls:
     - upsnap-0.1.0.tgz
     version: 0.1.0
-generated: "2024-07-16T00:19:01.499284841Z"
+generated: "2024-07-16T00:49:40.060418264Z"
