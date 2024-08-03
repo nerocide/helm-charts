@@ -1,5 +1,28 @@
 apiVersion: v1
 entries:
+  cryptpad:
+  - apiVersion: v2
+    appVersion: 2024.6.0
+    created: "2024-08-03T10:13:19.161136855Z"
+    dependencies:
+    - name: common
+      repository: https://bjw-s.github.io/helm-charts
+      version: 3.1.0
+    description: Collaborative office suite, end-to-end encrypted and open-source
+    digest: 49c845fed83299ea339b299e95d04732fedf4ad78cbf599efa797f95a5db276f
+    home: https://cryptpad.fr/
+    icon: https://cryptpad.fr/api/logo
+    keywords:
+    - collaboration
+    - end-to-end-encryption
+    - collaborative-editing
+    name: cryptpad
+    sources:
+    - https://github.com/cryptpad/cryptpad
+    type: application
+    urls:
+    - cryptpad-0.1.tgz
+    version: "0.1"
   jellyfin:
   - apiVersion: v2
     appVersion: 10.9.7
@@ -196,4 +219,4 @@ entries:
     urls:
     - upsnap-0.1.0.tgz
     version: 0.1.0
-generated: "2024-08-03T10:12:19.424668268Z"
+generated: "2024-08-03T10:13:19.387254828Z"
