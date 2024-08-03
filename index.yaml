@@ -110,6 +110,28 @@ entries:
     urls:
     - https://github.com/nerocide/helm-charts/releases/download/recyclarr-0.1.0/recyclarr-0.1.0.tgz
     version: 0.1.0
+  syncthing:
+  - apiVersion: v2
+    appVersion: 1.27.9
+    created: "2024-08-03T10:12:19.424649873Z"
+    dependencies:
+    - name: common
+      repository: https://bjw-s.github.io/helm-charts
+      version: 3.1.0
+    description: Open Source Continuous File Synchronization
+    digest: 00283ec8c00b4bc046e5ea9cd38f540110ce8846fef44c27cf4a1b83ee2a067d
+    home: https://syncthing.net/
+    icon: https://github.com/syncthing/syncthing/blob/main/gui/default/assets/img/favicon-default.png
+    keywords:
+    - synchronization
+    - p2p
+    name: syncthing
+    sources:
+    - https://github.com/syncthing/syncthing
+    type: application
+    urls:
+    - syncthing-0.1.0.tgz
+    version: 0.1.0
   upsnap:
   - apiVersion: v2
     appVersion: 4.2.10
@@ -174,4 +196,4 @@ entries:
     urls:
     - upsnap-0.1.0.tgz
     version: 0.1.0
-generated: "2024-07-16T00:49:40.060418264Z"
+generated: "2024-08-03T10:12:19.424668268Z"
