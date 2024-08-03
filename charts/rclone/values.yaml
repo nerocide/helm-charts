@@ -9,6 +9,13 @@ controllers:
           pullPolicy: IfNotPresent
           # -- image tag
           tag: 1.67.0
+          args:
+            - rcd
+            - --rc-addr=:5572
+            - --rc-web-gui
+            - --rc-web-gui-no-open-browser
+            # - --rc-user=xxxxx
+            # - --rc-pass=xxxxx
 
 # -- Configures service settings for the chart.
 service:
