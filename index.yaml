@@ -66,6 +66,30 @@ entries:
     urls:
     - jellyfin-0.1.tgz
     version: "0.1"
+  notifiarr:
+  - apiVersion: v2
+    appVersion: v0.8.1
+    created: "2024-09-09T21:09:04.797539347Z"
+    dependencies:
+    - name: common
+      repository: https://bjw-s.github.io/helm-charts
+      version: 3.1.0
+    description: rsync for cloud storage
+    digest: 1a0764b95e13bc783762fce4a58b0b195cbb39baa33b33ac91e9ebbaffbe8b99
+    home: https://notifiarr.com/
+    icon: https://github.com/Notifiarr/notifiarr/blob/main/pkg/bindata/files/images/favicon.png
+    keywords:
+    - notification
+    - discord
+    - radarr
+    - sonarr
+    name: notifiarr
+    sources:
+    - https://github.com/Notifiarr/notifiarr
+    type: application
+    urls:
+    - notifiarr-0.1.0.tgz
+    version: 0.1.0
   rclone:
   - apiVersion: v2
     appVersion: 1.67.0
@@ -240,4 +264,4 @@ entries:
     urls:
     - upsnap-0.1.0.tgz
     version: 0.1.0
-generated: "2024-08-03T16:27:23.460966516Z"
+generated: "2024-09-09T21:09:04.797567199Z"
