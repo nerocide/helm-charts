@@ -9,13 +9,7 @@ controllers:
           pullPolicy: IfNotPresent
           # -- image tag
           tag: 0.8.1
-          args:
-            - rcd
-            - --rc-addr=:5572
-            - --rc-web-gui
-            - --rc-web-gui-no-open-browser
-            # - --rc-user=xxxxx
-            # - --rc-pass=xxxxx
+
 # see https://hub.docker.com/r/golift/notifiarr
 # for a complete list of options
 # environment:
