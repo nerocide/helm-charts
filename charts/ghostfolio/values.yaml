@@ -29,7 +29,7 @@ controllers:
           - name: REDIS_PORT
             value: "6379"
           - name: REDIS_PASSWORD
-            value: '{{ .Values.redis.password }}'
+            value: '{{ .Values.redis.auth.password }}'
           - name: ACCESS_TOKEN_SALT
             valueFrom:
               secretKeyRef:
