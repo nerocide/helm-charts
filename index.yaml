@@ -26,6 +26,38 @@ entries:
   ghostfolio:
   - apiVersion: v2
     appVersion: 2.110.0
+    created: "2024-10-07T19:35:16.268301758Z"
+    dependencies:
+    - name: common
+      repository: https://bjw-s.github.io/helm-charts
+      version: 3.1.0
+    - alias: postgresql
+      condition: postgresql.enabled
+      name: postgresql
+      repository: oci://registry-1.docker.io/bitnamicharts
+      version: 13.2.0
+    - alias: redis
+      condition: redis.enabled
+      name: redis
+      repository: oci://registry-1.docker.io/bitnamicharts
+      version: 18.2.0
+    description: "Open Source Wealth Management Software. Angular + NestJS + Prisma
+      + Nx + TypeScript \U0001F90D"
+    digest: bf0df7aafbb7546366a56d2cf091168cecd4ae5f95a03ae57cefa940f561cd40
+    home: https://github.com/seriousm4x/UpSnap
+    icon: https://github.com/ghostfolio/ghostfolio/blob/main/apps/client/src/assets/favicon-32x32.png
+    keywords:
+    - finance
+    - portfolio
+    name: ghostfolio
+    sources:
+    - https://github.com/ghostfolio/ghostfolio
+    type: application
+    urls:
+    - ghostfolio-0.1.7.tgz
+    version: 0.1.7
+  - apiVersion: v2
+    appVersion: 2.110.0
     created: "2024-10-07T19:07:10.020478936Z"
     dependencies:
     - name: common
@@ -480,4 +512,4 @@ entries:
     urls:
     - upsnap-0.1.0.tgz
     version: 0.1.0
-generated: "2024-10-07T19:07:10.020504214Z"
+generated: "2024-10-07T19:35:16.268328288Z"
