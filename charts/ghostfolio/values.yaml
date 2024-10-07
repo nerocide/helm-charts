@@ -14,9 +14,32 @@ controllers:
           # -- image tag
           tag: latest
         env:
-          DATABASE_URL: 'postgresql://{{ postgresql.auth.username }}:${{ postgresql.auth.password }}@postgres:5432/{{ postgresql.auth.database }}?connect_timeout=300&sslmode=prefer'
-          REDIS_HOST: redis
-          REDIS_PASSWORD: '{{ .Release.Name }}'
+          # DATABASE_URL: 'postgresql://{{ postgresql.auth.username }}:${{ postgresql.auth.password }}@postgres:5432/{{ postgresql.auth.database }}?connect_timeout=300&sslmode=prefer'
+          # REDIS_HOST: redis
+          # REDIS_PASSWORD: '{{ .Release.Name }}'
+          - name: DATABASE_URL
+            valueFrom:
+              secretKeyRef:
+                name: ghostfolio-secret
+                key: postgresqlUrl
+          - name: NODE_ENV
+            value: {{ .Values.ghostfolio.nodeEnv }}
+          - name: REDIS_HOST
+            value: ghostfolio-redis-master
+          - name: REDIS_PORT
+            value: "6379"
+          - name: REDIS_PASSWORD
+            value: {{ .Values.redis.password }}
+          - name: ACCESS_TOKEN_SALT
+            valueFrom:
+              secretKeyRef:
+                name: ghostfolio-secret
+                key: accessTokenSalt
+          - name: JWT_SECRET_KEY
+            valueFrom:
+              secretKeyRef:
+                name: ghostfolio-secret
+                key: jwtSecretKey
 
 ghostfolio: #
   nodeEnv: production
