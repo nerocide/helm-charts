@@ -18,27 +18,32 @@ controllers:
           REDIS_HOST: redis
           REDIS_PASSWORD: '{{ .Release.Name }}'
 
-        postgresql: #
-          enabled: true
-          primary:
-            persistence:
-              size: 2Gi
-          image:
-            tag: 15.4.0
-          auth:
-            postgresPassword: changeme
-            username: ghostfolio
-            password: changeme
-            database: ghostfolio
+ghostfolio: #
+  nodeEnv: production
+  accessTokenSalt: sometokensometokenso
+  jwtSecretKey: sometokensometokenso
 
-        redis: #
-          enabled: true
-          master:
-            persistence:
-              enabled: false
-          architecture: standalone
-          auth:
-            password: changeme
+postgresql: #
+  enabled: true
+  primary:
+    persistence:
+      size: 2Gi
+  image:
+    tag: 15.4.0
+  auth:
+    postgresPassword: changeme
+    username: ghostfolio
+    password: changeme
+    database: ghostfolio
+
+redis: #
+  enabled: true
+  master:
+    persistence:
+      enabled: false
+  architecture: standalone
+  auth:
+    password: changeme
 
 # -- Configures service settings for the chart.
 service:
