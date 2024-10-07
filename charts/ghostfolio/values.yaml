@@ -3,9 +3,9 @@ controllers:
   main:
     containers:
       main:
-        dependsOn: 
-          - postgresql
-          - redis
+        # dependsOn: 
+        #   - postgresql
+        #   - redis
         image:
           # -- image repository
           repository: docker.io/ghostfolio/ghostfolio
