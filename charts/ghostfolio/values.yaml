@@ -23,13 +23,13 @@ controllers:
                 name: ghostfolio-secret
                 key: postgresqlUrl
           - name: NODE_ENV
-            value: {{ .Values.ghostfolio.nodeEnv }}
+            value: '{{ .Values.ghostfolio.nodeEnv }}'
           - name: REDIS_HOST
             value: ghostfolio-redis-master
           - name: REDIS_PORT
             value: "6379"
           - name: REDIS_PASSWORD
-            value: {{ .Values.redis.password }}
+            value: '{{ .Values.redis.password }}'
           - name: ACCESS_TOKEN_SALT
             valueFrom:
               secretKeyRef:
