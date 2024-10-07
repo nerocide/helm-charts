@@ -1,0 +1,70 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ghostfolio
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ghostfolio
+  template:
+    metadata:
+      labels:
+        app: ghostfolio
+    spec:
+      {{- with .Values.affinity }}
+      affinity:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      containers:
+      - name: ghostfolio
+      {{- with .Values.image }}
+        image: {{ .registry }}/{{ .repository }}:{{ .tag }}
+      {{- end }}
+        image: {{ .Values.image.registry }}/{{ .Values.image.repository }}:{{ .Values.image.tag }}
+        env:
+          - name: DATABASE_URL
+            valueFrom:
+              secretKeyRef:
+                name: ghostfolio-secret
+                key: postgresqlUrl
+          - name: NODE_ENV
+            value: {{ .Values.ghostfolio.nodeEnv }}
+          - name: REDIS_HOST
+            value: ghostfolio-redis-master
+          - name: REDIS_PORT
+            value: "6379"
+          - name: REDIS_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: ghostfolio-redis
+                key: redis-password
+          - name: ACCESS_TOKEN_SALT
+            valueFrom:
+              secretKeyRef:
+                name: ghostfolio-secret
+                key: accessTokenSalt
+          - name: JWT_SECRET_KEY
+            valueFrom:
+              secretKeyRef:
+                name: ghostfolio-secret
+                key: jwtSecretKey
+        resources:
+          {{- toYaml .Values.resources | nindent 10 }}
+        ports:
+        - containerPort: 3333
+          name: http
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 3333
+          initialDelaySeconds: 40
+          periodSeconds: 10
+          failureThreshold: 3
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 3333
+          initialDelaySeconds: 60
+          periodSeconds: 10
+          failureThreshold: 3
