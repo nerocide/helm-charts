@@ -22,14 +22,15 @@ controllers:
               secretKeyRef:
                 name: ghostfolio-secret
                 key: postgresqlUrl
-          - name: NODE_ENV
-            value: '{{ .Values.ghostfolio.nodeEnv }}'
           - name: REDIS_HOST
             value: ghostfolio-redis-master
           - name: REDIS_PORT
             value: "6379"
           - name: REDIS_PASSWORD
-            value: '{{ .Values.redis.auth.password }}'
+            valueFrom:
+              secretKeyRef:
+                name: ghostfolio-redis
+                key: redis-password
           - name: ACCESS_TOKEN_SALT
             valueFrom:
               secretKeyRef:
@@ -65,7 +66,6 @@ ingress:
     #           port: http
 
 ghostfolio: #
-  nodeEnv: production
   accessTokenSalt: sometokensometokenso
   jwtSecretKey: sometokensometokenso
 
