@@ -27,7 +27,14 @@ controllers:
           - --port
           - "8081"
           - "/config"
-
+service:
+  # Configure a service for the code-server sidecar
+  code:
+    type: ClusterIP
+    controller: main
+    ports:
+      http:
+        port: 8081
 persistence:
   config:
     type: persistentVolumeClaim
