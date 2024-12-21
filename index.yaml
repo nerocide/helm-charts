@@ -458,6 +458,29 @@ entries:
   recyclarr:
   - apiVersion: v2
     appVersion: v6.0.2
+    created: "2024-12-21T21:02:56.835274996Z"
+    dependencies:
+    - name: common
+      repository: https://bjw-s.github.io/helm-charts
+      version: 3.1.0
+    description: A command-line application that will automatically synchronize recommended
+      settings from the TRaSH guides to your Sonarr/Radarr instances.
+    digest: 6d656269aed682743356132caf89fc95d8410bb5f95460d0bf7a08b47ead2d79
+    home: https://recyclarr.dev/
+    icon: https://github.com/recyclarr/recyclarr/blob/master/ci/notify/trash-icon.png
+    keywords:
+    - radarr
+    - sonarr
+    - trash
+    name: recyclarr
+    sources:
+    - https://github.com/recyclarr/recyclarr
+    type: application
+    urls:
+    - recyclarr-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v2
+    appVersion: v6.0.2
     created: "2024-12-21T20:42:48.298210259Z"
     dependencies:
     - name: common
@@ -588,4 +611,4 @@ entries:
     urls:
     - upsnap-0.1.0.tgz
     version: 0.1.0
-generated: "2024-12-21T20:42:48.298260943Z"
+generated: "2024-12-21T21:02:56.835300774Z"
