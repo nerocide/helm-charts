@@ -10,7 +10,14 @@ controllers:
           pullPolicy: IfNotPresent
           # -- image tag
           tag: 5.3.0
-
+          # use this when IPv6 is disabled in you setyup
+          # see https://github.com/TimWolla/docker-adminer/issues/30
+          # args:
+          #   - php
+          #   - -S
+          #   - 0.0.0.0:8080
+          #   - -t
+          #   - /var/www/html
 # -- Configures service settings for the chart.
 service:
   main:
