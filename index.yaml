@@ -66,6 +66,28 @@ entries:
     urls:
     - cryptpad-0.1.tgz
     version: "0.1"
+  dispatcharr:
+  - apiVersion: v2
+    appVersion: 0.18.1
+    created: "2026-02-08T15:11:02.595140484Z"
+    dependencies:
+    - name: common
+      repository: https://bjw-s-labs.github.io/helm-charts
+      version: 3.1.0
+    description: IPTV stream management
+    digest: 14fef7552ae52812f477193b7f295e5209d549ed872dca246c46c4b066fcf2a8
+    home: https://github.com/Dispatcharr/Dispatcharr
+    icon: https://github.com/Dispatcharr/Dispatcharr/blob/main/frontend/src/logo.svg
+    keywords:
+    - iptv
+    - dba
+    name: dispatcharr
+    sources:
+    - https://github.com/Dispatcharr/Dispatcharr
+    type: application
+    urls:
+    - dispatcharr-0.0.1.tgz
+    version: 0.0.1
   ghostfolio:
   - apiVersion: v2
     appVersion: 2.110.0
@@ -654,4 +676,4 @@ entries:
     urls:
     - upsnap-0.1.0.tgz
     version: 0.1.0
-generated: "2025-08-05T17:34:22.601981096Z"
+generated: "2026-02-08T15:11:03.5740864Z"
