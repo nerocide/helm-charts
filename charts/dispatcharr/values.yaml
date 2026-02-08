@@ -5,11 +5,11 @@ controllers:
       main:
         image:
           # -- image repository
-          repository: dispatcharr
+          repository: dispatcharr/dispatcharr
           # -- image pull policy
           pullPolicy: IfNotPresent
           # -- image tag
-          tag: 0.18.1-20260206020542
+          tag: 0.18.1
           # use this when IPv6 is disabled in you setyup
           # see https://github.com/TimWolla/docker-adminer/issues/30
           # args:
