@@ -430,6 +430,31 @@ entries:
     urls:
     - jellyfin-0.1.tgz
     version: "0.1"
+  maintainerr:
+  - apiVersion: v2
+    appVersion: 3.24.0
+    created: "2026-08-21T19:09:09.165950448Z"
+    dependencies:
+    - name: common
+      repository: https://bjw-s-labs.github.io/helm-charts
+      version: 3.1.0
+    description: Looks and smells like Seerr, does the opposite. A library maintenance
+      tool for Plex, Jellyfin and Emby.
+    digest: 8f1d0e2f561cc4df55af084496daa790ff2f6eae82be19650460c8fd3ca4487d
+    home: https://maintainerr.info/
+    icon: https://github.com/Maintainerr/Maintainerr/blob/development/apps/ui/public/logo_icon.svg
+    keywords:
+    - radarr
+    - sonarr
+    - trash
+    - jellyfin
+    name: maintainerr
+    sources:
+    - https://github.com/maintainerr/Maintainerr
+    type: application
+    urls:
+    - maintainerr-0.0.1.tgz
+    version: 0.0.1
   notifiarr:
   - apiVersion: v2
     appVersion: v0.8.1
@@ -718,4 +743,4 @@ entries:
     urls:
     - upsnap-0.1.0.tgz
     version: 0.1.0
-generated: "2026-02-09T21:17:19.521673117Z"
+generated: "2026-08-21T19:09:09.166006621Z"
