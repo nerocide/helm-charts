@@ -1,0 +1,52 @@
+controllers:
+  main:
+    containers:
+      main:
+        image:
+          # -- image repository
+          repository: maintainerr/maintainerr
+          # -- image pull policy
+          pullPolicy: IfNotPresent
+          # -- image tag
+          # tag: latest
+          env:
+            - name: TZ
+              value: Europe/Paris
+            # - name: BASE_PATH      # uncomment if serving from a subfolder
+            #   value: /maintainerr
+          probes:
+            liveness:
+              enabled: true
+              custom: true
+              spec:
+                initialDelaySeconds: 30
+                periodSeconds: 30
+                httpGet:
+                  path: /api/health/live
+                  port: 6246
+            readiness:
+              enabled: true
+              custom: true
+              spec:
+                initialDelaySeconds: 10
+                periodSeconds: 10          
+                httpGet:
+                  path: /api/health/ready
+                  port: 6246
+service:
+  main:
+    controller: main
+    ports:
+      http:
+        port: 6246
+ingress:
+  main:
+    enabled: false
+
+persistence:
+  config:
+    type: persistentVolumeClaim
+    accessMode: ReadWriteOnce
+    size: 1Gi
+    globalMounts:
+      - path: /opt/data
